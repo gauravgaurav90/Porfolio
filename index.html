@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #be27be;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            border-bottom: #d61091 3px solid;
+            text-align: center;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+            margin: 0 15px;
+        }
+        .main-content {
+            background: #ffffff;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-pic {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-pic img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        h2, h3 {
+            color: #35424a;
+        }
+        .contact-info, .skills, .education, .achievements, .coding-profile {
+            margin-bottom: 20px;
+        }
+        .skills ul, .education ul, .achievements ul, .coding-profile ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li, .education li, .achievements li, .coding-profile li {
+            background: #8bc34a;
+        
+            color: #ffffff;
+            padding: 10px;
+            margin-bottom: 5px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .coding-profile li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .coding-profile li a:hover {
+            text-decoration: underline;
+        }
+        .toggle-content {
+            display: none;
+        }
+        .toggle-button {
+            background: #c414d0;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gaurav</h1>
+            <a href="https://in.linkedin.com/in/gauravn90">Linkedln</a>
+            <a href="ngaurav877@gmail.com">Contact us</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="profile-pic">
+                <img src="gaurav.jfif" alt="Gaurav's Photo">
+            </div>
+            <h2>Gaurav</h2>
+            <p>Java and Web Developer at IBM</p>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: ngaurav877@gmail.com</p>
+                <p>Phone: +918218058817</p>
+            </div>
+
+            <div class="skills">
+             
+                <div class="toggle-button" onclick="toggleContent('skills', this)">Show Skills</div>
+                <ul class="toggle-content" id="skills">
+                    <li>React</li>
+                    <li>Java Development</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                    <li>MongoDB</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+
+            <div class="education">
+               
+                <div class="toggle-button" onclick="toggleContent('education', this)">Show Education</div>
+                <ul class="toggle-content" id="education">
+                    <li>Bachelor of Technology in Computer Science</li>
+                </ul>
+            </div>
+
+            <div class="coding-profile">
+               
+                <div class="toggle-button" onclick="toggleContent('coding-profile', this)">Show Coding Profiles</div>
+                <ul class="toggle-content" id="coding-profile">
+                    <li><a href="https://leetcode.com/u/Leomesk12/">Leetcode</a></li>
+                    <li><a href="https://auth.geeksforgeeks.org/user/tpiuye/practice">GeeksforGeeks</a></li>
+                    <li><a href="https://www.hackerearth.com/@gaurav3851">HackerEarth</a></li>
+                    <li><a href="https://www.hackerearth.com/@gaurav3851">Others</a></li>
+                </ul>
+            </div>
+
+            <div class="achievements">
+              
+                <div class="toggle-button" onclick="toggleContent('achievements', this)">Show Achievements</div>
+                <ul class="toggle-content" id="achievements">
+                    <li>Qualified GATE 2023 and 2024 conducted by IT Kanpur and IISC Bangaluru</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id, button) {
+            const content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                button.textContent = `Hide ${id.charAt(0).toUpperCase() + id.slice(1)}`;
+            } else {
+                content.style.display = "none";
+                button.textContent = `Show ${id.charAt(0).toUpperCase() + id.slice(1)}`;
+            }
+        }
+    </script>
+</body>
+</html>
